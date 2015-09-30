@@ -1,6 +1,8 @@
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
+ * or more cont
+
+ ributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
  * regarding copyright ownership.  The ASF licenses this file
  * to you under the Apache License, Version 2.0 (the
@@ -25,6 +27,10 @@
 //
 document.addEventListener("deviceready", onDeviceReady, false);
 document.addEventListener("offline", onOffline, false);
+// document.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+// document.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+// document.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+// document.addEventListener('exit', function(event) { alert(event.type); });
 // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
 //
 function onDeviceReady() {
@@ -49,11 +55,25 @@ function onOnline() {
     $("#message").addClass('hide');
     $("#main_message").addClass('hide');
     $("#sub_message").addClass('hide');
-    window.location = "http://www.facebook.com/";
-     // setTimeout(function(){
-     //        var ref = window.open('http://www.wufoo.com/html5/attributes/07-accept.html', '_blank', 'location=no');
-     //        ref.addEventListener('loaderror', function(event) { ref.close(); location.reload(); });
-     // }, 3000);
+    //navigator.device.overrideBackButton();
+    setTimeout(function(){
+            //$('#iliketomoveit1').click();
+             //$(location).attr('href','http://mobile.jakasecurities.ph/walkthrough/start.php');
+             var ref = window.open('http://mobile.easystocks.ph/walkthrough/start.php', '_blank', 'location=no,toolbar=no');
+             
+             document.addEventListener("backbutton", function(event) { alert('back to: ' + event.url); }, false); 
+
+             ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+             ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+             ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+             //ref.addEventListener('backbutton', function(event) { alert('back to: ' + event.url); }, false);
+             ref.addEventListener('exit', function(event) { alert(event.type); });
+             // //$.mobile.changePage('/www/slider.html');
+             //super.loadUrl("file:///android_asset/www/index.html");
+             //var ref = window.open('http://mobile.jakasecurities.ph/walkthrough/start.php', '_blank', 'location=no');
+             //ref.addEventListener('loaderror', function(event) { ref.close(); location.reload(); });
+             
+      }, 3000);
 }
 
 

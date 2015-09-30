@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.photobook" version="1" versionCode = "1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>photobook</name>
+<widget id="com.jaka" version="2" versionCode = "2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Jaka Investments</name>
     <description>
-        Photobook official mobile application
+        Jaka Investments official mobile application
     </description>
-    <author email="admin@photobook.com" href="http://photobook.com/">
-        admin@photobook.com
+    <author email="admin@easystocks.com" href="http:/easystocks.com/">
+        admin@jaka.com
     </author>
 
     <content src="index.html" />
@@ -42,8 +42,8 @@
     <icon src="res/icons/ios/icon-72-2x.png" gap:platform="ios" width="144" height="144" />
 
     <access origin="*" subdomains="true" />
-    <preference name="Fullscreen" value="true" />
-    <preference name="orientation" value="landscape" />
+    <preference name="Fullscreen" value="false" />
+    <preference name="orientation" value="portrait" />
     <preference name="phonegap-version" value="3.6.3" />
 
 
